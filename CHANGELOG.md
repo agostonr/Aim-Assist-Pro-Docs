@@ -1,3 +1,7 @@
+### Version 1.2.1
+
+Fixing an issue that the demo scenes' dependencies did not import automatically.
+
 ### Version 1.2.0
 
 This release will introduce changes to the public methods on the aim assist classes. 
