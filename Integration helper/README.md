@@ -2,6 +2,11 @@
 
 If you have concerns whether you could integrate Aim Assist Pro into your project with the already purchased third party assets, you can try out the dummy scripts provided in this repository, in the folder **Integration helper**. 
 
+## Integration happens through code
+
+Due to the wide availability of third party input and character control methods as well as in-house solutions and multiple options from Unity, integration has to happen via code. 
+The examples in the documentation and test scenes are based on Unity's First Person Controller template. 
+
 The scripts themselves won't do anything obviously, but their structure and public interface is the same as the actual scripts in the asset. 
 Import the dummies to your project and try to integrate them based on the docs. 
 
