@@ -1,3 +1,46 @@
+### Version 2.0.0
+
+- upgraded the demo scene and added a practice range with various targets
+- added a built project open to try out for anyone
+- moved the actual scripts and the practice range under a different assembly definition for better separation
+- breaking change - the aim assists meant for production are in their own assembly "AimAssistPro". Find them in AimAssistPro > Source. 
+- there's a demo scene for the practice range and it has its own assembly "PracticeRange". 
+- created editor utilities (todo implement auto instantiation from editor utility). 
+- there's only one practice range scene, and it handles the different configurations based on preprocessor directives.
+- added reticles that show the effective aim assist radius
+- new target selection: cone (using lines and spheres in a cone shape)
+- breaking change - each aim assist has its own target selector for more flexibility. disabling the aim assist disables its target selector as well. 
+- Magnetism no longer needs the movement input delta as a parameter
+- new aim assist: Motion Tracker
+- added code comments to communicate the intention better
+- now different configurations for different targets are supported
+- breaking change - IPlayerPhysicsInfo interface has been replaced with the PlayerPhysicsInfo abstract class
+- LegacyPlayerPhysicsInfo: serves the previous, manual drag and drop setting of the rigidbody or character controller
+- AutomaticPlayerPhysicsInfo: finds the rigidbody or charactercontroller automatically. supports kinematic rigidbodies.
+- breaking change - simplified the namespaces by a lot. make sure to clear the old namespaces and reimport the new ones.
+- AimAssistCameraManager: a component that finds the camera to use automatically, or lets the player define a manual override. 
+  works with cinemachine's multi-camera setup but does not require CM to be used.
+- separate layers are introduced for aim assist targets and the map (or objects that block the aim assist) - improves performance
+- automatic integrator: handle camera pitch and player turn automatically, and in case of CM notify the player when it's configured to hard track a target.
+- added checks and notifications for self collision to speed up debugging if there is anything wrong with aim assist
+- logs in the aim assist assembly are only enabled in editor.
+- AimAssistResult has been deprecated. Use the Rotation struct instead as that's returned from the rotational assists.
+- removed the 'Helper' folder as it was just bloat
+- The TargetSelectorDebugDrawer is deprecated. There's a better alternative,
+- Added DebugDrawer that draws target selection lines and spheres, only in the editor. different instance for different aim assists.
+- AimAssistTarget can now return the collision volume's center as well as the GameObject pivot (transform position). You can also use a proxy, which is another transform set in the inspector.
+- simplified the scripts icons - a crosshair is an aim assist script, and a hit mark is the target
+- added a lot of reminders in the form on logs where something has to be set up but isn't. these logs are only present in the editor to prevent a performance hit.
+- the LookInputBasedAimAssistChainer is deprecated. Use the InputAimAssistManager instead. 
+- for unity input system, added AimAssistInputProcessor that calls the input aim assist manager to integrate the input with
+- friction now takes the target collider's average volume into consideration
+- added presets for the debug drawers and aim assists
+- AutoAim has now two factors (strength at center and edge), instead of one and the end result is interpolated between the two
+- AutoAim now supports inverted input
+- AimLock uses an interpolated player position, making rotations at high speed somewhat smoother.
+- Per target overrides are available for each aim assist. Configurable on AimAssistTarget.
+- Menu is added to equip object with aim assist
+
 ### Version 1.2.1
 
 Fixing an issue that the demo scenes' dependencies did not import automatically.
