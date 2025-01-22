@@ -41,6 +41,23 @@
 - Per target overrides are available for each aim assist. Configurable on AimAssistTarget.
 - Menu is added to equip object with aim assist
 
+### Version 1.2.5
+
+- Fixed a bug where assist wasn't working with the editor's reload on play disabled.
+- Changed the root package folder so it doesn't contain the publisher first.
+
+### Version 1.2.4
+
+Added an example scene for the Input Manager.
+
+### Version 1.2.3
+
+Fixed mouse handling for the test scene.
+
+### Version 1.2.2
+
+Fixed the layers for the spherecast.
+
 ### Version 1.2.1
 
 Fixing an issue that the demo scenes' dependencies did not import automatically.
