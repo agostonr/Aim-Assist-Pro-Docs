@@ -1,3 +1,6 @@
+### Version 2.0.1
+- AimLock can be configured to disengage when the target's center is reached within a set radius.
+
 ### Version 2.0.0
 
 - upgraded the demo scene and added a practice range with various targets
