@@ -1,3 +1,11 @@
+### Version 2.0.3
+- AimLock now has an option to enable a constant velocity (used to be always inverse proportionate to radius)
+- Fixed the No Cinemachine scene for its Auto Integrator config, had an incorrect setting
+
+### Version 2.0.2
+- Fixed interpolation that contained AimLock's result which should be raw
+- In the OrbitalFollow demo scene, the capsule's material was left as default which wasn't compatible with URP and HDRP, fixed it.
+
 ### Version 2.0.1
 - AimLock can be configured to disengage when the target's center is reached within a set radius.
 
