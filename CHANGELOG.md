@@ -1,3 +1,10 @@
+### Version 2.0.4
+- InputManager is supported and there's a demo scene for it
+- New aim assist: Magic Bullet (directs shots at the target)
+- AimLock has an event that fires when the target is centered.
+- Fixed a double shot issue on the practice range for controllers
+- Fixed a double jump animation issue on the practice range
+
 ### Version 2.0.3
 - AimLock now has an option to enable a constant velocity (used to be always inverse proportionate to radius)
 - Fixed the No Cinemachine scene for its Auto Integrator config, had an incorrect setting
