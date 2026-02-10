@@ -1,3 +1,18 @@
+### Version 2.1.0
+- *Deprecated components are marked with the Obsolete attribute! Please consult the sent documentation on how to migrate before upgrade!*
+- Rotation rework - cleaned up jitter with better accuracy, removed bandaid rolling average smoothing, implemented specific controls for Cinemachine free look and orbital follow
+- Greatly simplified the glue code: all separate intgegrators, managers are gone, there's one AimAssistController (subdivided to partial classes for ease of maintenance)
+- Simpler and more intuitive reticle, debug drawer, bootstrapper
+- Long range handling: removed extra cone sphere for the cone selector, added distance dependent zone scaling curve for both cone and sphere selector
+- 3 multiple target resolution methods are available instead of the prev. early exit: first to find (legacy), closest to crosshair, closest to player
+- AimLock now compensates for player and enemy movement too, in addition to auto rotation
+- AimLock auto rotation can be turned off while look input is active
+- AimLock now has unified rotation on the two axes, and has a distance independent angular velocity instead of time to aim
+- Magnetism incorrectly rotated during simple forward-back movement, now fixed
+- MotionTracker can now stick to target if it would leave the reticle
+- PracticeRange: added multi target selection area, as well as long range area
+- Removed additional low quality example scenes for cinemachine orbital follow / pan tilt, they are part of the PracticeRange through camera selection
+
 ### Version 2.0.4
 - InputManager is supported and there's a demo scene for it
 - New aim assist: Magic Bullet (directs shots at the target)
